@@ -61,8 +61,8 @@ func reverse(str string) (result string) {
 func fetchDigit2(row string) int {
 	left := 0
 	digits := make([]byte, 2)
-	row = r1.Replace(row)
 	reversedRow := r2.Replace(reverse(row))
+	row = r1.Replace(row)
 	for left < len(row) {
 		if isDigit(row[left]) {
 			digits[0] = row[left]
@@ -97,4 +97,5 @@ func Part2(filename string) int {
 
 func main() {
 	fmt.Println(Part1("day1.txt"))
+	fmt.Println(Part2("day1.txt"))
 }
